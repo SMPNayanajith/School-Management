@@ -1,0 +1,21 @@
+/* Adds.css */
+
+/* Ensure the container covers the entire viewport */
+.adds-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto; /* Enable scrolling if content overflows */
+}
+
+/* Ensure the image fits within the slide */
+.swiper-slide img {
+   /* Keep the original image width */
+  height: auto; /* Maintain aspect ratio */
+}
+.full-screen-image{
+  background-size: cover;
+  background-position: center;
+}
+.img2{
+  width: 65%;
+}

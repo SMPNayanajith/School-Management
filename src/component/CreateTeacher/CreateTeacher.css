@@ -1,0 +1,20 @@
+.form1{
+    margin: 15px;
+    border: 10px;
+    padding: 10px;
+    color: black;
+    font-weight:bolder;
+    align-items: center;
+
+}
+.formletter{
+    
+    margin: 10px;
+    text-align: left;
+}
+.form-control{
+   
+    border-width: 1;
+    border-color:black ;
+    
+}
