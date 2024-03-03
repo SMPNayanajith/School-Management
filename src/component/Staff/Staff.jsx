@@ -30,7 +30,7 @@ export default function Staff() {
             <th scope="col">Email </th>
             <th scope="col">Registration No.</th>
             <th scope="col">Address</th>
-            <th scope="col">Action</th>
+            <th scope="col">Birthday</th>
           </tr>
         </thead>
         <tbody>
@@ -41,7 +41,7 @@ export default function Staff() {
               <td>{staff.email_address}</td>
               <td>{staff.registration_no}</td>
               <td>{staff.address}</td>
-              {/* <td>{staff.birthday}</td> */}
+              <td>{staff.birthday}</td> 
               <td>
                 <button class="btn btn-primary" type="submit">Update</button>
                 <button type="button" class="btn btn-danger">Delete</button>
