@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './CreateTeacher.css';
 import NavBar from '../NavBar/NavBar';
 import axios from 'axios';
+import { Navigate } from 'react-router-dom';
 
 export default function CreateTeacher() {
   const [teacher, setTeacher] = useState({
@@ -24,6 +25,7 @@ export default function CreateTeacher() {
     try {
       await axios.post('http://localhost:8080/api/v1/teacher/post', teacher);
       alert('Teacher created successfully');
+       Navigate("/Teacher");
       // Optionally, redirect or perform other actions
     } catch (error) {
       console.error('Error creating teacher:', error);

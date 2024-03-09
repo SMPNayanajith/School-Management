@@ -25,7 +25,8 @@ export default function CreateStudent() {
   const onSubmit = async (e) => {
     e.preventDefault();
     await axios.post('http://localhost:8080/api/v1/student/post', student);
-    navigate('/');
+    alert('Student created successfully');
+    navigate('/Students');
   };
 
   return (

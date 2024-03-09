@@ -16,14 +16,19 @@ export default function Students() {
     setStudents(result.data);
   };
 
+  const deleteStudent = async (id) => {
+    await axios.delete(`http://localhost:8080/api/v1/student/delete/${id}`);
+    loadStudents(); // Reload the students after deletion
+  };
+
   return (
     <div>
       <NavBar />
-      <button type="button" class="btn btn-primary btn-lg buttonstyle">
+      <button type="button" className="btn btn-primary btn-lg buttonstyle">
         <Link to="/CreateStudent" className='buttonlink'>Create Student</Link>
       </button>
 
-      <table class="table shadow tabledata">
+      <table className="table shadow tabledata">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -32,6 +37,7 @@ export default function Students() {
             <th scope="col">Registration No.</th>
             <th scope="col">Address</th>
             <th scope="col">Birthday</th>
+            <th scope="col">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -44,8 +50,8 @@ export default function Students() {
               <td>{student.address}</td>
               <td>{student.birthday}</td>
               <td>
-                <button class="btn btn-primary" type="submit">Update</button>
-                <button type="button" class="btn btn-danger">Delete</button>
+                <button className="btn btn-primary" type="submit">Update</button>
+                <button onClick={() => deleteStudent(student.id)} className="btn btn-danger">Delete</button>
               </td>
             </tr>
           ))}
