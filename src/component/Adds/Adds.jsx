@@ -8,7 +8,7 @@ import img2 from '../../images/school.jpg';
 
 export default function Adds() {
   return (
-    <div className='adds-container'>
+    <div className='adds-container adds'>
       
 
 

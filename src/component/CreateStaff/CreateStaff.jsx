@@ -26,7 +26,7 @@ export default function CreateStaff() {
     e.preventDefault();
     try {
       await axios.post('http://localhost:8080/api/v1/staff/post', staff);
-      alert('Staff created successfully');
+      alert('Staff- created successfully');
       navigate('/staff');
     } catch (error) {
       console.error('Error creating staff:', error);
